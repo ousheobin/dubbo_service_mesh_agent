@@ -29,9 +29,9 @@ Consumer => Client | HTTP协议
 
 假定Prodvider业务逻辑处理时延是50ms，docker集群内有以下节点：
 - Consumer节点 -通过SpringBoot暴露服务供客户端调用
-- Provider Large节点 - SpringBoot+Dubbo提供服务，启动参数：-Xms1G -Xmx1G 
+- Provider Large节点 - SpringBoot+Dubbo提供服务，启动参数：-Xms3G -Xmx3G 
 - Provider Medium节点 - SpringBoot+Dubbo提供服务，启动参数：-Xms2G -Xmx2G 
-- Provider Small 节点 - SpringBoot+Dubbo提供服务，启动参数：-Xms3G -Xmx3G 
+- Provider Small 节点 - SpringBoot+Dubbo提供服务，启动参数：-Xms1G -Xmx1G 
 - ETCD 节点 - 服务器注册与服务发现
 
 使用wrk调用Consumer进行测试，测试结果
